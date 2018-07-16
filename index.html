@@ -1,86 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <!-- plt.ly js -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
   </head>
   <body>
-    <h1>This is for testing Formisimo</h1>
-
-    <div class="container">
-    <form>
-        <div class="form-group row">
-          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-          <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    <div class="columns">
+        <div class="header">
+          <img class="formisimo-logo" src="/images/formisimo-logo.png">
+          <div class="brand-explainer">
+            <p>Premium platform that helps companies<br>
+            understand customer behaviour in their online forms</p>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-          </div>
+        <div class="header-img">
+          <img src="images/wp-optimising-forms.png">
         </div>
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                <label class="form-check-label" for="gridRadios1">
-                  First radio
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                <label class="form-check-label" for="gridRadios2">
-                  Second radio
-                </label>
-              </div>
-              <div class="form-check disabled">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                <label class="form-check-label" for="gridRadios3">
-                  Third disabled radio
-                </label>
-              </div>
-            </div>
-          </div>
-        </fieldset>
-        <div class="form-group row">
-          <div class="col-sm-2">Checkbox</div>
-          <div class="col-sm-10">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck1">
-              <label class="form-check-label" for="gridCheck1">
-                Example checkbox
-              </label>
-            </div>
-          </div>
+        <div class="heading-text">
+          <h1>How To Optimise Forms</h1>
         </div>
-        <div class="form-group row">
-          <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Sign in</button>
-          </div>
+        <div class="mobile-sidebar">
+          <form></form>
         </div>
-      </form>
+        <div class="body-text">
+          <p>67% of consumers who start to fill in a form don't complete it. If you value the conversion rate of your forms then how do you start improving them? If you invest in a form optimisation programme, what value can your business get from it?<br><br><b>Read our free e-book and find out:</b> 
+            <ul>
+            <li>The process behind optimising and improving your forms.</li>
+            <li>How to calculate the Return On Investment of a form optimisation programme.</li>
+            <li>How to kick-start your form optimisation in four weeks.</li>
+          </ul>
+          </p>
+        </div>
+        <div class="logo-block">
+          <h3 class="logo-header">FORMISIMO WORKS WITH:</h3>
+          <img class="logo1" src="/images/customer-logos/allianz.png">
+          <img class="logo2" src="/images/customer-logos/qvc.png">
+          <img class="logo3" src="images/customer-logos/justgiving.png">
+          <img class="logo4" src="images/customer-logos/very.png">
+          <img class="logo5" src="images/customer-logos/williamhill.png">
+          <img class="logo6" src="images/customer-logos/toyota.png">
+          <img class="logo7" src="images/customer-logos/capitalone.png">
+          <img class="logo8" src="images/customer-logos/secretescapes.png">
+          <img class="logo9" src="images/customer-logos/travelex.png">
+          <img class="logo10" src="images/customer-logos/allianz.png">
+        </div>
+ <div class="ebook-preview">
+   <p><b>Preview:</b></p>
+    <div class="controls previouspage" id="previous">
+        <i class="fas fa-5x fa-angle-left"></i>
     </div>
-    
-    <div id="myDiv" style="width: 480px; height: 400px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div class="controls nextpage" id="next">
+        <i class="fas fa-5x fa-angle-right"></i>
+    </div>
+    <ul id="slides">
+        <li class="slide showing"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+
+    </ul>
+      </div>
+        <div class="footer"></div>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="/js/graph.js"></script>
+
+    <div class="sidebar">
+        <form>
+            <label>Email*:</label>
+            <input autocomplete="off" autocapitalize="off" spellcheck="off" tabindex="1" type="email" class="required" name="mauticform[your_email_address]" placeholder="e.g. john.smith@airbnb.com">
+
+            <label>Phone Number*:</label>
+            <input id="mauticform_input_demopage2_telephone" autocomplete="off" autocapitalize="off" spellcheck="off" tabindex="2" type="text" class="required errorinline" name="mauticform[telephone]">
+
+            <label>First Name*:</label>
+            <input id="mauticform_input_demopage_your_first_name" autocomplete="off" autocapitalize="off" spellcheck="off" tabindex="3" type="text" class="required" name="mauticform[your_first_name]" placeholder="e.g. John">
+
+            <label>Last Name*:</label>
+            <input autocomplete="off" autocapitalize="off" spellcheck="off" tabindex="4" type="text" class="required" name="mauticform[your_last_name]" placeholder="e.g. Smith">
+
+            <div class="button_wrap">
+            <button type="button" tabindex="7" id="join-register" class="download_now">
+                DOWNLOAD NOW
+              </button>
+            </div>
+            
+        </form>
+        <div class="description text"></div>
+
+    </div>
+
+
+
+
+
+    <script type="text/javascript" src="/js/carousel.js"></script>
   </body>
 </html>

@@ -1,0 +1,365 @@
+
+html {
+    font-size: 16;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+    -webkit-margin-before:0em;
+    -webkit-margin-after:0em;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-row-gap: 0;
+    grid-template-areas:
+        "head sb"
+        "h-img sb"
+        "h-text sb"
+        "b-text sb"
+        "l-block sb"
+        "e-pre sb"
+        "foot sb"
+
+}
+
+.header {
+    grid-area: head;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 1em;
+    margin-left: 7em;
+}
+
+.formisimo-logo {
+    max-width: 22%;
+    grid-column: 1;
+    grid-row: 1;
+    display: block;
+    align-self: flex-start;
+}
+
+.brand-explainer {
+    font-size: 0.8rem;
+    color: #B1B1B1;
+    line-height: 95%;
+    margin-left: 1em;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.header-img {
+    grid-area: h-img;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 3em;
+}
+
+.header-img > img {
+    max-width: 50vw;
+    height: auto;
+    width: auto;
+}
+
+.heading-text {
+    grid-area: h-text;
+    background-color: white;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.heading-text > h1 {
+    color: #707070;
+    font-size: 4.5rem;
+    font-weight: normal;
+    -webkit-margin-after: 0.3em;
+}
+
+.body-text {
+    grid-area: b-text;
+    background-color: white;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.body-text > p, ul {
+    color: #919191
+}
+
+.body-text > ul {
+    -webkit-margin-before: 0.5em;
+}
+
+.logo-block {
+    grid-area: l-block;
+    background-color: #f0f5f8;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 2rem;
+    padding-bottom: 2em;
+    margin-top: 2em;
+}
+
+.logo-header {
+    grid-column: 1/8;
+}
+
+.logo1 {
+    grid-column: 2/3;
+}
+
+.logo2 {
+    grid-column: 3/4;
+}
+
+.logo3 {
+    grid-column: 4/5;
+}
+
+.logo4 {
+    grid-column: 5/6;
+}
+
+.logo5 {
+    grid-column: 6/7;
+}
+
+.logo6 {
+    grid-column: 2/3;
+}
+
+.logo7 {
+    grid-column: 3/4;
+}
+
+.logo8 {
+    grid-column: 4/5;
+}
+
+.logo9 {
+    grid-column: 5/6;
+}
+
+.logo10 {
+    grid-column: 6/7;
+}
+
+.ebook-preview {
+    grid-area: e-pre;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.ebook-preview > p {
+    grid-column: 2;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #919191;
+    margin-bottom: 1rem;
+
+}
+
+.footer {
+    grid-area: foot;
+    background-color: white;
+}
+
+
+
+.sidebar {
+    grid-area: sb;
+    padding: 5rem;
+    align-self: flex-start;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    position: sticky;
+    top: 0;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;    
+}
+
+/*
+essential styles:
+these make the slideshow work
+*/
+
+#slides {
+    position: relative;
+    height: 28vw; 
+    width: 100%;
+    padding: 0px;
+    margin-top: 1rem;
+    list-style-type: none;
+    grid-column: 2 / 3;
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide:nth-of-type(1) {
+    background-image: url(/images/pdffirstpage.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.slide:nth-of-type(2) {
+    background-image: url(/images/pdfsecondpage.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.slide:nth-of-type(3) {
+    background-image: url(/images/pdfthirdpage.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.previouspage{
+    grid-column-start: 2;
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    justify-self: start;
+    opacity: 0.5;
+}
+
+.nextpage{
+    position: absolute;
+    grid-column: 2 / 3;
+    z-index: 5;
+    top: 50%;
+    justify-self: end;
+    opacity: 0.5;
+}
+
+.nextpage:hover {
+    opacity: 0.7;
+}
+
+.previouspage:hover {
+    opacity: 0.7;
+}
+
+input {
+    /*display: block;
+    width: 80%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    border: 1px solid #CFCFCF; */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    background-color: #FFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .75);
+    display: block;
+    font-family: inherit;
+    font-size: 1.3rem;
+    height: 2.8rem;
+    margin: 0.4rem 0 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-transition: border-color .15s linear, background .15s linear;
+    transition: border-color .15s linear, background .15s linear
+}
+
+input::-webkit-input-placeholder {
+    color:#c1c1c1;
+    font-weight: 200;
+  }
+input::-moz-placeholder {
+    color: #c1c1c1;
+    font-weight: 200;
+  }
+
+.download_now {
+    font-weight: 550;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    border-radius: 0.4rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: #00C184;
+    -webkit-text-fill-color: #FFF;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+
+}
+
+form {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.button_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    font-size: 1.5rem;
+    color: #707070;
+
+}
+
+
+
+
+
+
+
