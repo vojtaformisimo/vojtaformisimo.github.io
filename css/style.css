@@ -1,6 +1,22 @@
 
-html {
-    font-size: 66%;
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 80%
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 95%
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 100%
+    }
 }
 
 
@@ -15,19 +31,49 @@ p {
     -webkit-margin-after:0em;
 }
 
-.columns {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-row-gap: 0;
-    grid-template-areas:
-        "head sb"
-        "h-img sb"
-        "h-text sb"
-        "b-text sb"
-        "l-block sb"
-        "e-pre sb"
-        "foot sb"
+@media (min-width: 769px) {
+    .columns {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-row-gap: 0;
+        grid-template-areas:
+            "head sb"
+            "h-img sb"
+            "h-text sb"
+            "b-text sb"
+            "l-block sb"
+            "e-pre sb"
+            "foot sb"
+    }
+}
 
+@media (max-width: 768px) {
+    .columns {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 0;
+        grid-template-areas:
+            "head"
+            "h-img"
+            "h-text"
+            "m-sb"
+            "b-text"
+            "l-block"
+            "e-pre"
+            "foot"
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-sidebar {
+        visibility: hidden;
+    }
 }
 
 .header {
@@ -40,7 +86,7 @@ p {
 }
 
 .formisimo-logo {
-    max-width: 22%;
+    max-width: 15rem;
     grid-column: 1;
     grid-row: 1;
     display: block;
@@ -73,24 +119,25 @@ p {
 .heading-text {
     grid-area: h-text;
     background-color: white;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 .heading-text > h1 {
     color: #707070;
-    font-size: 4.5rem;
+    font-size: 3.2rem;
     font-weight: normal;
     -webkit-margin-after: 0.3em;
+    text-align: center;
 }
 
 .body-text {
     grid-area: b-text;
     background-color: white;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.7;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 .body-text > p, ul {
@@ -160,14 +207,14 @@ p {
 .ebook-preview {
     grid-area: e-pre;
     display: grid;
-    grid-template-columns: 20% 1fr 20%;
+    grid-template-columns: 10rem 1fr 10rem;
     position: relative;
     margin-top: 2rem;
 }
 
 .ebook-preview > p {
     grid-column: 2;
-    font-size: 1.3rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: #919191;
     margin-bottom: 1rem;
@@ -183,21 +230,24 @@ p {
 
 .sidebar {
     grid-area: sb;
-    padding: 5rem;
+    padding: 3rem;
     align-self: flex-start;
     background-color: white;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19);
-    position: sticky;
+    position: fixed;
+    width: 33.4%;
+    right: 0;
     top: 0;
     margin: 0;
-    height: 100vh;
-    box-sizing: border-box;    
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: scroll;    
 }
 
-/*
-essential styles:
-these make the slideshow work
-*/
+.mobile-sidebar {
+    grid-area: m-sb;
+       
+}
 
 #slides {
     position: relative;
@@ -254,6 +304,7 @@ these make the slideshow work
     position: absolute;
     z-index: 5;
     top: 50%;
+    left: 3rem;
     justify-self: start;
     opacity: 0.5;
 }
@@ -263,6 +314,7 @@ these make the slideshow work
     grid-column: 2 / 3;
     z-index: 5;
     top: 50%;
+    right: 3rem;
     justify-self: end;
     opacity: 0.5;
 }
@@ -299,10 +351,10 @@ input {
     color: rgba(0, 0, 0, .75);
     display: block;
     font-family: inherit;
-    font-size: 1.3rem;
-    height: 2.8rem;
-    margin: 0.4rem 0 2rem;
-    padding: 0.4rem;
+    font-size: 1rem;
+    height: 2.5rem;
+    margin: 0.1rem 0 1.5rem;
+    padding: 0.5rem;
     width: 100%;
     box-sizing: border-box;
     -webkit-transition: border-color .15s linear, background .15s linear;
@@ -328,8 +380,8 @@ input::-moz-placeholder {
     -ms-user-select: none;
     user-select: none;
     border: 1px solid transparent;
-    padding: 0.5rem 1.5rem;
-    font-size: 1.5rem;
+    padding: 0.3rem 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.5;
     border-radius: 0.4rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -342,8 +394,8 @@ input::-moz-placeholder {
 }
 
 form {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .button_wrap {
@@ -352,10 +404,19 @@ form {
 }
 
 label {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #707070;
 
 }
+
+.sidebar p {
+    color: #B1B1B1;
+    line-height: 1.5;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+
 
 
 
